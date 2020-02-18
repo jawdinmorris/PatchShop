@@ -34,7 +34,7 @@ function CheckoutForm({ stripe, totalCost, itemsInCart }) {
 
 
 
-            let response = await fetch('/functions/charge', {
+            let response = await fetch('/.netlify/functions/charge', {
                 method: 'POST',
                 body: JSON.stringify({
                     amount: totalCost * 100,
